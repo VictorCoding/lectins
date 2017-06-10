@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="foodType">
+      <ion-segment-button value="yes">
+        Yes Foods
+      </ion-segment-button>
+      <ion-segment-button value="no">
+        No Foods
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="foodType">
+    <div *ngSwitchCase="'yes'">
+      <ion-item-group *ngFor="let type of yesFoods">
+        <ion-item-divider color="light">{{type.name}}</ion-item-divider>
+        <ion-item *ngFor="let food of type.list">{{food}}</ion-item>
+      </ion-item-group>
+    </div>
+    <div *ngSwitchCase="'no'">
+      <ion-item-group *ngFor="let type of noFoods">
+        <ion-item-divider color="light">{{type.name}}</ion-item-divider>
+        <ion-item *ngFor="let food of type.list">{{food}}</ion-item>
+      </ion-item-group>
+    </div>
+  </div>
+</ion-content>
