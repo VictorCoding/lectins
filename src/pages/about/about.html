@@ -7,5 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-item-group>
+    <ion-item-divider color="light">Recipes</ion-item-divider>
+    <button *ngFor="let recipe of recipes" ion-item (click)="viewRecipe(recipe)">
+      {{recipe.name}}
+    </button>
+  </ion-item-group>
 </ion-content>
