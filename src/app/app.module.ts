@@ -9,6 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen'
 import { ViewRecipe } from '../pages/view-recipe/view-recipe'
 import { NotesPage } from '../pages/notes/notes'
 import { RecipePage } from '../pages/recipe/recipe'
+import { SearchPipe } from '../pipes/Search.pipe'
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RecipePage } from '../pages/recipe/recipe'
     ViewRecipe,
     NotesPage,
     RecipePage,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
